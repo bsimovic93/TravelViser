@@ -25,9 +25,9 @@ let genSeats = () =>{
 
 }
 
-let openPopup = ()=>{
-	
-
+let togglePopup = ()=>{
+	$('.user-from-tr').toggle(150);
+	console.log("clicked!");
 }
 
 let locations = [];
@@ -64,10 +64,7 @@ $('.card-header').click(
 		$('.card-body').toggle(150);
 	},
 );
-$('.button-gray-tr').click(()=>{
-
-	$('#user-form').toggle(150);
-})
+$('.button-gray-tr').click(()=>{togglePopup();});
 
 let printSeatNumbers = () => {
 	let seats = document.getElementsByClassName('seat-item-tr');
