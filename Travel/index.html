@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/6922c64a2d.js" crossorigin="anonymous"></script>
+    
+    <title>Travel</title>
+    
+  </head>
+  <body>
+
+    
+      <div id="user-form" class="user-from-tr"></div>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" >
+        <a href="#" class="navbar-brand" style="color:orangered">Travel</a>
+       <ul class="navbar-nav">
+           <li class="navbar-item"><a class="nav-link" href="#">Contact</a></li>
+           
+           <li class="navbar-item"><a class="nav-link" href="#">About</a></li>
+       </ul>
+    </nav>
+    <br>
+    
+   <div class="container">
+        <h5 class="current-time-tr"></h5>
+       <div class="jumbotron">
+           <div class="row">
+               <div class="col-sm-3">
+                    <input id="from-tr" type="text" class="form-control loc-tr" placeholder="Departure">
+               </div>
+               <div class="col-sm-1" style="text-align: center;">
+                   <button  type="button" class="btn button-orange-tr" tabindex="-1" onclick="SwapLocations()"><i class="fas fa-arrows-alt-h"></i></button>
+               </div>
+               <div class="col-sm-3">
+                    <input id="to-tr" type="text" class="form-control loc-tr" placeholder="Arrival"> 
+                </div>
+                <div class="col-sm-3">
+                    <input type="date" class="form-control">
+               </div>
+               <div class="col-sm-2">
+                    <button  type="button" class="btn button-orange-tr">Display</button>
+                </div>
+           </div>
+       </div>
+       <br>
+       <div class="schedule-list">
+           <label for="">Schedules:</label>
+           
+           <div class="card">
+            <div class="card-header card-header-tr" >
+              Start Location  <i class="fas fa-arrow-right"></i>  End Location 00:00 01.01.1970
+            </div>
+            <div class="card-body" style="display: none;">
+              <div class="row">
+                <div class="col-sm-7">
+                  <p class="card-text">Seats Available: 24</p>
+                </div>
+                <div class="col-sm-5">
+                  <br>
+                  <p>Info text</p>
+                  <p>Other text</p>
+                </div>
+              </div>
+             
+              <br>
+              <a href="#" class="btn button-orange-tr" data-toggle="modal" data-target="#confirmReservation" >Reserve</a>
+              <a href="#" class="btn button-gray-tr">Detail</a>
+            </div>
+          </div>
+       </div>
+       <br>
+       <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+   </div>
+
+   <!--Modal-->
+   <div class="modal fade" id="confirmReservation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Reservation Successful!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+ 
+</html>
